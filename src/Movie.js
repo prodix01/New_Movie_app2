@@ -1,5 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
+import "./Movie.css";
 
 const Movie = ({id, title, year, rating, summary, poster,genres}) => {
     return (
@@ -8,10 +9,10 @@ const Movie = ({id, title, year, rating, summary, poster,genres}) => {
             <div className="movie__data">
                 <h3 className="movie__title">{title}</h3>
                 <h5 className="movie__year">{year}</h5>
-                <ul>
-                    {genres.map((genres, index) => (
+                <ul className="movie__genres">
+                    {genres.map((genre, index) => (
                         <li key={index} className="genres__genre">
-                            {genres}
+                            {genre}
                         </li>
                     ))}
                 </ul>
