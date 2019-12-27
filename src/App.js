@@ -32,11 +32,11 @@ class App extends Component {
         return (
             <section className="container">
                 {isLoading ? (
-                    <div>
-                        <span>Loading...</span>
+                    <div className="loader">
+                        <span className="loader__text">Loading...</span>
                     </div>
                 ) : (
-                    <div>
+                    <div className="movies">
                         {
                             movies.map(movie => (
                                 <Movie
@@ -47,6 +47,7 @@ class App extends Component {
                                     title={movie.title}
                                     rating={movie.rating}
                                     poster={movie.medium_cover_image}
+                                    genres={movie.genres}
                                 />
                             ))
                         }
